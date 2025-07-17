@@ -1,6 +1,6 @@
 FROM node:20
 WORKDIR /opt/server # you wish
-COPY pakage.json .
+COPY package.json .
 COPY *.js .
 RUN npm install
 # systemctl work avadhu in docker lo that we are using ENV
