@@ -2,7 +2,7 @@ FROM node:20
 WORKDIR /opt/server # you wish
 COPY pakages.json .
 COPY *.js .
-RUN npm
+RUN npm install
 # systemctl work avadhu in docker lo that we are using ENV
 
 ENV MONGO="true" \
