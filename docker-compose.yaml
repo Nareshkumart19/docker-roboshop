@@ -32,12 +32,18 @@ services:
     image: nareshkumart/mysql:v1 
     container_name: mysql
   shipping:
-   image: nareshkumart/shipping:v1 
-   container_name: shiiping
-   depends_on: 
+    image: nareshkumart/shipping:v1 
+    container_name: shipping
+    depends_on: 
     - mysql
     - cart
-
+  rabbitmq:
+    image: rabbitmq:3
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: roboshop 
+      RABBITMQ_DEFAULT_PASS: roboshop123
+      
 
 
 
