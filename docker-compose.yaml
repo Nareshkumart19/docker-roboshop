@@ -44,7 +44,7 @@ services:
       RABBITMQ_DEFAULT_USER: roboshop 
       RABBITMQ_DEFAULT_PASS: roboshop123
   payment:
-    image: nareshkumart/payment
+    image: nareshkumart/payment:v1
     container_name: payment
     environment:
       CART_HOST: cart
@@ -54,7 +54,6 @@ services:
       AMQP_HOST: rabbitmq
       AMQP_USER: roboshop
       AMQP_PASS: roboshop123
-
     depends_on:
       - cart
       - user
