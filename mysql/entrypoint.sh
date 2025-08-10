@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -f /tmp/mysql-root-password.txt ]; then
-    PASSWORD=$(cat /tmp/mysql_root_password.txt)
+    PASSWORD=$(cat /tmp/mysql-root-password.txt)
     echo "Accessed Root password"
 else
     echo "Password file not found"
